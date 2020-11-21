@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no,
+            initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no" />
+        <title>Tinderlux</title>
+        <link rel="stylesheet" href="css/iconfont/iconfont.css">
+        <link rel="stylesheet" href="css/mui.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/rem.js"></script>
+        <script type="text/javascript" src="js/template-web.js"></script>
+        <script type="text/javascript" src="js/commen.js"></script>
+        <script src="js/swiper.min.js"></script>
+    </head>
+    <style>
+        .dialog_li_2cell .input_price {
+    width: 44%;
+    height: .46rem;
+    margin: 0 1%;
+    margin-bottom: .12rem;
+    border-radius: .23rem;
+    background-color: #f7f7f7;
+    border: 0;
+    text-align: center;
+
+}
+    </style>
+    <body>
+        <div class="l_mask"></div>
+        <div class="z_index_top">
+            <p><img src="images/logo.png" alt=""></p>
+            <!-- <a href="search.html">请输入关键字</a> -->
+            <div class="b_search2">
+                <div class="fl b_search_content2" style="width:84%">
+                    <input placeholder="Your keyword...." class="j_searchBTN"
+                        id="keywords">
+                </div>
+                <span class="fl" style="width:13%">
+                    <span class="right_icon iconfont icon-sousuo" id="search"></span>
+                </span>
+            </div>
+        </div>
+        <div id="topNav" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide active" id="all" data-id=""><span>All</span></div>
+            </div>
+        </div>
+        <div class="z_nav_add iconfont icon-shaixuan"></div>
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper"
+            style="margin-bottom: 0.8rem">
+            <div class="mui-scroll">
+                <section id="company_list" class="mui-table-view
+                    mui-table-view-striped mui-table-view-condensed l_list_pub
+                    pdtp24" style="background-color: #f3f4f6;">
+                    <!-- <li>
+                    <a href=""><img src="http://39.105.147.45:8001/Upload/Products/2001130330266ac2e1-6cc0-44c9-95fe-95513427c85c.jpg" alt=""></a>
+                    <h1 class="ellipsis">Pochette Félicie Brown Damier Ébène Canvas Cross Body Bag</h1>
+                    <p>$1200<span>$1200</span></p>
+                </li>
+                <li>
+                    <a href=""><img src="http://39.105.147.45:8001/Upload/Products/2001130330266ac2e1-6cc0-44c9-95fe-95513427c85c.jpg" alt=""></a>
+                    <h1 class="ellipsis">Pochette Félicie Brown Damier Ébène Canvas Cross Body Bag</h1>
+                    <p>$1200<span>$1200</span></p>
+                </li>
+                <li>
+                    <a href=""><img src="http://39.105.147.45:8001/Upload/Products/2001130330266ac2e1-6cc0-44c9-95fe-95513427c85c.jpg" alt=""></a>
+                    <h1 class="ellipsis">Pochette Félicie Brown Damier Ébène Canvas Cross Body Bag</h1>
+                    <p>$1200<span>$1200</span></p>
+                </li>
+                <li>
+                    <a href=""><img src="http://39.105.147.45:8001/Upload/Products/2001130330266ac2e1-6cc0-44c9-95fe-95513427c85c.jpg" alt=""></a>
+                    <h1 class="ellipsis">Pochette Félicie Brown Damier Ébène Canvas Cross Body Bag</h1>
+                    <p>$1200<span>$1200</span></p>
+                </li> -->
+                </section>
+            </div>
+        </div>
+        <div class="z_ser_none" style="display: none;">
+            <span class="iconfont icon-zanwuneirong"></span> Sorry,no related
+            products.
+        </div>
+        <div class="j_foot-nav">
+            <ul class="foot-navli">
+                <li class="now">
+                    <a href="./index.html"><span class="iconfont icon-w_shouye"></span>Home</a>
+                </li>
+                <li>
+                    <a href="./Designers.html"><span class="iconfont
+                            icon-pinpai2"></span>Designers</a>
+                </li>
+                <li>
+                    <a href="./list.html?&recommend=true"><span class="iconfont
+                            icon-tuijian"></span>Featured</a>
+                </li>
+                <li>
+                    <a href="./about.html"><span class="iconfont
+                            icon-guanyuwomen"></span>About</a>
+                </li>
+                <li>
+                    <a href="./contact.html"><span class="iconfont
+                            icon-w_taolun"></span>Contact</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <ul class="l_dialog">
+            <!-- <li id="bages">
+                <h1>BAGE</h1>
+                <span>All</span>
+            </li>
+            <li id="access">
+                <h1>ACCESSORIES</h1>
+                <span>All</span>
+            </li> -->
+            <li id="category" style="border-bottom:0">
+                <h1>CATEGORY</h1>
+                <h4 id="bages1" class="category" ><label>BAGES</label><img class="a_down bages_down" src="./images/arrow-down-bold.png"/>
+                    <img class="a_down bages_up" style="display: none;" src="./images/arrow-up-bold.png"/>
+                </h4>
+                <li id="bages" >
+                    <span>All</span>
+                </li>
+                <h4 id="access1" class="category"><label>ACCESSORIES</label><img class="a_down access_down" src="./images/arrow-down-bold.png"/>
+                    <img class="a_down access_up" style="display: none;" src="./images/arrow-up-bold.png"/>
+                </h4>
+                    <li id="access" >
+                        <span>All</span>
+                    </li>
+              
+            </li>
+            <!--  <li id="access">
+                <h1>ACCESSORIES</h1>
+                <span>All</span>
+            </li> -->
+            </li>
+            <li id="brands">
+                <h1>DESIGNERS</h1>
+                <span>All</span>
+            </li>
+            <li id="colors">
+                <h1>COLOR</h1>
+                <span>All</span>
+            </li>
+            <li id="prices" class="dialog_li_2cell">
+                <h1>PRICE FILTER</h1>
+                <input class="input_price" type="number" id="min_price" placeholder="MIN"></input>—
+                <input class="input_price" type="number" id="max_price" placeholder="MAX"></input>
+                <span>All</span>
+                <span data-id="1">0 - $400</span>
+                <span data-id="2">$400 - $800</span>
+                <span data-id="3">$800 - $1600</span>
+                <span data-id="4">$1600 - $3200</span>
+                <span data-id="5">$3200+</span>
+            </li>
+            <li id="grades" class="dialog_li_5cell">
+                <h1>GRADE</h1>
+                <span>All</span>
+            </li>
+            <div class="dialog_btn_left">Reset</div>
+            <div class="dialog_btn_right">Submit</div>
+        </ul>
+        <div class="b-msg"></div>
+        <script src="js/mui.min.js"></script>
+        <script type="text/javascript">
+        //添加频道
+        var $mask = $('.l_mask');
+        var $close = $('.l_close');
+        var $dialogMask = $('.l_mask, .l_dialog_mine');
+        var topHeight = $(".z_index_top").outerHeight(),
+            navHeight = $("#topNav").outerHeight(),
+            listLiHeight = $(window).outerWidth() * 0.48,
+            totalPageCount,
+            pageIndex = 1;
+        $(".z_nav_add").css('top', topHeight);
+        $("#pullrefresh").css('marginTop', topHeight + navHeight);
+
+
+        //频道列表
+        for (var i = -10; i < 1; i++) {
+            var html;
+            fun_date(i);
+            if (i == 0) {
+                html = '<div class="swiper-slide" data-id="' + lastDay + '"><span>' + 'Today' + '</span></div>';
+            } else {
+                html = '<div class="swiper-slide" data-id="' + lastDay + '"><span>' + lastDayShow + '</span></div>';
+            }
+            $("#all").after(html);
+        }
+
+        //频道滑动
+        var mySwiper = new Swiper('#topNav', {
+            freeMode: true,
+            freeModeMomentumRatio: 0.5,
+            slidesPerView: 'auto',
+
+        });
+        swiperWidth = mySwiper.container[0].clientWidth
+        maxTranslate = mySwiper.maxTranslate();
+        maxWidth = -maxTranslate + swiperWidth / 2
+
+        $(".swiper-container").on('touchstart', function(e) {
+            e.preventDefault()
+        })
+
+        mySwiper.on('tap', function(swiper, e) {
+            //	e.preventDefault()
+            //执行加载
+
+
+            slide = swiper.slides[swiper.clickedIndex]
+            slideLeft = slide.offsetLeft
+            slideWidth = slide.clientWidth
+            slideCenter = slideLeft + slideWidth / 2
+                // 被点击slide的中心点
+
+            mySwiper.setWrapperTransition(300)
+
+            if (slideCenter < swiperWidth / 2) {
+
+                mySwiper.setWrapperTranslate(0)
+
+            } else if (slideCenter > maxWidth) {
+
+                mySwiper.setWrapperTranslate(maxTranslate)
+
+            } else {
+
+                nowTlanslate = slideCenter - swiperWidth / 2
+
+                mySwiper.setWrapperTranslate(-nowTlanslate)
+
+            }
+
+            $("#topNav  .active").removeClass('active')
+            $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+                //切换频道加载对应数据
+            var dataId = $(".active").attr('data-id');
+            $("#pullrefresh").css('marginTop', topHeight + navHeight);
+            keyword.start = dataId;
+            keyword.end = dataId;
+            console.log(keyword);
+            pageIndex = 1;
+            // 发送ajax
+            publicAjax(1, keyword);
+            // mui回滚
+            mui('#pullrefresh').pullRefresh().refresh(true);
+            mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 50);
+        });
+
+
+        // 加载品牌数据
+        function screeningAjax(id, url) {
+            $.post(AjaxUrl + url, function(data) {
+                // console.log(data);
+                for (var i = 0; i < data.Data[0].length; i++) {
+                    var html = '<span data-id="' + data.Data[0][i].Id + '">' + data.Data[0][i].Name + '</span>';
+                    $(id).append(html);
+                }
+            })
+        }
+        screeningAjax('#access', 'mobile_types_second?typeId=6');
+        screeningAjax('#bages', 'mobile_types_second?typeId=2');
+        screeningAjax('#brands', 'mobile_brands');
+        screeningAjax('#colors', 'mobile_colors');
+        screeningAjax('#grades', 'mobile_grades');
+
+        // 筛选弹出
+        $('.z_nav_add').on('click', function() {
+            // 禁止body滚动
+            document.body.style.overflow = 'hidden';
+            // 展示弹出和遮罩层
+            $('.l_mask, .l_dialog').show();
+            // $(".l_dialog").css('top', topHeight + navHeight + areaHeight);
+        });
+        //弹出后阻止body滚动
+        function mo(e) {
+            e.preventDefault();
+        }
+
+        // 弹出层遮罩层
+        $mask.on('click', function() {
+            document.body.style.overflow = '';
+            $('.l_mask, .l_dialog').hide();
+        });
+        // 筛选内容选择操作
+        $('.l_dialog li').on('click', 'span', function() {
+            let parent_id = $(this).parent().attr('id')
+            if (parent_id === "bages") {
+                $('.category_radio2').click();
+                $('.bages_up').show();
+        $('.bages_down').hide();
+        $('#bages').show();
+        keyword.type = 2;
+       keyword.typesecond =  $(this).attr('data-id')
+            } else if (parent_id === "access") {
+                $('.category_radio3').click()
+                $('.access_up').show();
+        $('.access_down').hide();
+        $('#access').show();
+        keyword.type = 6;
+        keyword.typesecond =  $(this).attr('data-id')
+            }
+                var text = $(this).siblings("h1").text();
+                //console.log(text);
+                $(this).siblings("span").removeClass("hover");
+                $(this).addClass("hover");
+                var dataId = $(this).attr("data-id");
+                if (text == "DESIGNERS") {
+                    keyword.brand = dataId
+                } else if (text == "COLOR") {
+                    keyword.colour = dataId
+                } else if (text == "GRADE") {
+                    keyword.grade = dataId
+                } else if (text == "PRICE FILTER") {
+                    $('.input_price').val("")
+                    keyword.price = dataId
+                }
+            })
+            // 筛选重置操作
+        $('.dialog_btn_left').on('click', function() {
+                $('.l_dialog li span').removeClass("hover");
+                keyword.brand = '';
+                keyword.colour = '';
+                keyword.grade = '';
+                keyword.price = '';
+                keyword.pricestr = '';
+                keyword.priceend = '';
+                keyword.typesecond = '';
+               $('.input_price').val("")
+            })
+            // 筛选确定操作
+        $('.dialog_btn_right').on('click', function() {
+            keyword.pricestr = $('#min_price').val();
+            keyword.priceend = $('#max_price').val();
+            if(keyword.priceend || keyword.pricestr) {
+                keyword.price = 100
+            }
+            console.log(keyword);
+            $('.l_mask, .l_dialog').hide();
+            pageIndex = 1;
+            publicAjax(1, keyword);
+            mui('#pullrefresh').pullRefresh().refresh(true);
+            mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 50);
+        });
+
+        // 关键字搜索
+        $('#search').on('click', function() {
+            SiteSearch()
+        });
+        // 背包展开
+        $('#bages1').on('click', function() {
+            $('#access span').removeClass("hover");
+            $('.access_down').show();
+        $('.access_up').hide();
+        $('#access').hide();
+            if($('.bages_down').is(':hidden')){
+		$('.bages_down').show();
+        $('.bages_up').hide();
+        $('#bages').hide();
+		}else{//否则
+		$('.bages_down').hide();
+		$('.bages_up').show();
+		$('#bages').show();
+		}
+        });
+        // 品牌展开
+        $('#access1').on('click', function() {
+            $('#bages span').removeClass("hover");
+            $('.bages_down').show();
+        $('.bages_up').hide();
+        $('#bages').hide();
+            if($('.access_down').is(':hidden')){
+		$('.access_down').show();
+        $('.access_up').hide();
+        $('#access').hide();//
+		}else{
+		$('.access_down').hide();
+		$('.access_up').show();
+		$('#access').show();
+		}
+        });
+        //输入价格获得焦点
+        $('.input_price').on('focus', function() {
+                $(this).siblings("span").removeClass("hover");
+                // keyword.price=100;
+
+            })
+        function SiteSearch() {
+            var keywords = $("#keywords").val().trim();
+            console.log(keywords);
+            pageIndex = 1;
+            keyword.keywords = keywords;
+            publicAjax(1, keyword);
+            mui('#pullrefresh').pullRefresh().refresh(true);
+            mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 50);
+        };
+
+
+        // $('.l_dialog').on('click','li',function () {
+        //   document.body.style.overflow = '';
+        //   $('.l_mask, .l_dialog').hide();
+        //   var text = $(this).text();
+        //   $("#area").attr('data-area',text).text(text);
+        //   set('areaText',text);//存储选中area缓存
+        //   keyword.mc_id = "";
+        //   keyword.hot = "";
+        //   keyword.product_area = text;
+        //   pageIndex = 1;
+        //   // 发送ajax
+        //   publicAjax(1, keyword);
+        //   // mui回滚
+        //   mui('#pullrefresh').pullRefresh().refresh(true);
+        //   mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,50);
+        // });
+
+        /**
+         * **********|*********** 列表加载 **************
+         */
+        //列表下拉刷新、上拉加载初始化
+        mui.init({
+            pullRefresh: {
+                container: '#pullrefresh',
+                down: {
+                    callback: pulldownRefresh
+                },
+                up: {
+                    contentrefresh: 'Loading...',
+                    callback: pullupRefresh
+                }
+            }
+        });
+        //获取加载容器
+        function pulldownRefresh() {
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+        }
+        //分页加载方法
+        function pullupRefresh() {
+            pageIndex++;
+            if (pageIndex > totalPageCount) {
+                this.endPullupToRefresh(true);
+            } else {
+                publicAjax(pageIndex, keyword);
+                mui('#pullrefresh').pullRefresh().endPullupToRefresh();
+            }
+        }
+        //筛选对象参数
+        // int? price, int? type, int? brand, int? colour, int? grade, DateTime? start, DateTime? end, int? adminId, int? recommend, int? isSale, string ordstr = "DESC", string keywords = "", int page = 1, int pageSize = 10
+        var keyword = {
+            'price': '', //价格
+            'type': '', //类型
+            'brand': '', //品牌
+            'colour': '', //颜色
+            'grade': '', //级别
+            'start': '', //开始时间
+            'end': '', //结束时间
+            'adminId': '', //
+            'recommend': '', //推荐
+            'isSale': '', //特价
+            'ordstr': '', //
+            'keywords': '', //关键字
+            'page': '',
+            'pageSize': '',
+            //后加的
+            'pricestr':'',
+            'priceend':'',
+            'typesecond':'',
+        };
+        //筛选请求data
+        function publicAjax(type, obj) {
+            var page = type || 1;
+            obj.page = page;
+            // if(dataUser){
+            //   keyword.userid = dataUser.data.i_ui_identifier;
+            // }
+
+            $.ajax({
+                url: AjaxUrl + 'mobile_product_selech',
+                // async:true,    //是否异步
+                // jsonp: "callbackparam",    //跨域请求的参数名，默认是callback
+                // dataType: 'json',
+                type: 'POST',
+                data: obj,
+                success: function(data) {
+                    console.log(data);
+                    var html = '',
+                        dataARR = data.Data[0].ProductList,
+                        dataLength = dataARR.length;
+                    for (var i = 0; i < dataLength; i++) {
+                        var priceHtml;
+                        if (dataARR[i].SalePrice == 0 || dataARR[i].SalePrice == null) {
+                            priceHtml = '<p>$' + dataARR[i].ListPrice + '</p>';
+                        } else {
+                            priceHtml = '<p>$' + dataARR[i].ListPrice + '<span>$' + dataARR[i].SalePrice + '</span></p>';
+                        }
+                        html += '<li class="title_href" data-id="' + dataARR[i].Id + '">' +
+                            '<i>' + dataARR[i].GradeName + '</i>' +
+                            '<a href="" style="height:' + listLiHeight + 'px"><img src="' + linkUrl + dataARR[i].ImgUrl + '" alt=""></a>' +
+                            '<h1 class="ellipsis">' + dataARR[i].ProductName + '</h1>' +
+                            priceHtml +
+                            '</li>'
+                    }
+                    if (dataARR.length === 0) {
+                        $("#pullrefresh").hide();
+                        $(".z_ser_none").show();
+                    } else {
+                        $("#pullrefresh").show();
+                        $(".z_ser_none").hide();
+                        if (Number(page) === 1) {
+                            totalPageCount = Math.ceil(data.Data[0].AllCount.RecordCount / 10);
+                            $('#company_list').empty().append(html);
+                        } else {
+                            $('#company_list').append(html);
+                        }
+                    }
+                    //ajax加载成功后绑定轮播容器
+                    // var mySwiper2 = new Swiper('#banner',{
+                    //   autoplay:5000,
+                    //   visibilityFullFit : true,
+                    //   loop:true,
+                    //   observer:true,
+                    //   grabCursor: true,
+                    //   pagination : '.swiper-pagination',
+                    // });
+                }
+            });
+        }
+        //，默认加载第一页
+        console.log(keyword);
+        publicAjax(1, keyword);
+        /**
+         * **********跳转详情页 **************
+         */
+        var dataId = "";
+        mui("#company_list").on('tap', '.title_href', function() {
+            dataId = $(this).attr('data-id');
+            window.location.href = 'details.html?&Id=' + dataId;
+        });
+
+
+        // layer
+        $mask.on('click', function() {
+            $dialogMask.hide();
+            document.body.style.overflow = '';
+        });
+        // close dialog
+        $close.on('click', function() {
+            $dialogMask.hide();
+            document.body.style.overflow = '';
+        });
+    </script>
+    </body>
+
+</html>
